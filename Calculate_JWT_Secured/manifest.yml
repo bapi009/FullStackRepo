@@ -1,6 +1,0 @@
----
-applications: 
-- name: Calculate
-  memory: 1G
-  instances: 1
-  buildpack: java_buildpack_offline_latest
