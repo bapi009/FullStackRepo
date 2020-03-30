@@ -11,23 +11,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("api")
+@RequestMapping("/api")
 public class CalculateController {
 
     @Autowired
     CalculateService calculateService;
 
-    @PostMapping("/v1/add")
+    @PostMapping("/add")
     public ResponseEntity<BaseResponseTO> addNumbers(@RequestBody Operands operands) {
         BaseResponseTO<Integer> responseTO = calculateService.addNumbers(operands);
         return new ResponseEntity<>(responseTO, responseTO.getStatus());
     }
 
-    @PostMapping("/v1/diff")
+    @PostMapping("/diff")
     public ResponseEntity<BaseResponseTO> subtractNumbers(@RequestBody Operands operands) {
         BaseResponseTO<Integer> responseTO = calculateService.subtractNumbers(operands);
         return new ResponseEntity<>(responseTO, responseTO.getStatus());
     }
-
-
 }

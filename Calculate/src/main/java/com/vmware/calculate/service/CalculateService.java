@@ -6,6 +6,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 public interface CalculateService {
 
-    public BaseResponseTO<Integer> addNumbers(@RequestBody Operands operands);
-    public BaseResponseTO<Integer> subtractNumbers(@RequestBody Operands operands);
+    BaseResponseTO<Integer> addNumbers(@RequestBody Operands operands);
+    BaseResponseTO<Integer> subtractNumbers(@RequestBody Operands operands);
 }
